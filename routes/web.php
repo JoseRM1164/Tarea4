@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Account;
+use App\Http\Controllers\HomepageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomepageController@index');
+Route::get('/to-do-list', 'HomepageController@index');
 
-Route::get('/to-do-list', function () {
+Route::get('/nuevo', 'HomepageController@nuevo');
+
+Route::get('/guardado', 'HomepageController@guardado');
+
+Route::get('borrar/{id}', 'HomepageController@borrar');
+
+Route::get('editar/{id}', 'HomepageController@editar');
+
+Route::get('actualizado/{id}', 'HomepageController@actualizado');
+
+Route::get('/prueba', function () {
     return 'To do list';
 });
+
