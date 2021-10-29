@@ -29,7 +29,7 @@
     </div>
     <form action="../actualizado/{{$todo_arr->id}}">
         <input type="text" name="name" Value='{{$todo_arr->name}}' class="form-control">
-        <input type="submit" Value="Agregar" class="btn btn-success">
+        <input type="submit" Value="Actualizar" class="btn btn-success">
     </form>
 
     </div>
